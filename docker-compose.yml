@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  codex-proxy:
+    build: .
+    container_name: codex-proxy
+    ports:
+      - "4444:4444"
+    restart: unless-stopped

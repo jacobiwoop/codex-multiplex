@@ -1,0 +1,17 @@
+# ── Secrets ──
+providers.yaml
+.env
+
+# ── Local copies ──
+*.local
+
+# ── Python ──
+__pycache__/
+*.pyc
+
+# ── Docker ──
+.docker/
+
+# ── OS ──
+.DS_Store
+Thumbs.db

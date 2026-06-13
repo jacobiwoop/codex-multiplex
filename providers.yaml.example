@@ -1,0 +1,26 @@
+# ── Providers ──
+# Copie ce fichier en providers.yaml et remplis tes clés
+#
+# Chaque provider crée une route /{name}/v1/responses
+# et un endpoint /{name}/config pour la config Codex.
+#
+# Les clés API se mettent EN CLAIR — pas besoin de b64.
+# Mais si tu tiens à encoder, préfixe par b64:.
+
+providers:
+  - name: opencode
+    upstream: https://opencode.ai/zen/v1
+    api_key: "***"
+
+  - name: nvidia
+    upstream: https://integrate.api.nvidia.com/v1
+    api_key: "nvapi-***"
+
+  # - name: deepseek
+  #   upstream: https://api.deepseek.com/v1
+  #   api_key: "***"
+
+  # - name: ollama
+  #   upstream: http://host.docker.internal:11434/v1
+  #   api_key: ""
+  #   format: responses
