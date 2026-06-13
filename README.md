@@ -80,16 +80,16 @@ wire_api = "responses"
 ### 4. Utilisation
 
 ```bash
-# Avec un provider spécifique
-codex exec -m deepseek-v4-flash-free -c model_provider=opencode "ta question"
-
-codex exec -m qwen/qwen3.5-397b-a17b -c model_provider=nvidia "ta question"
-
-# En mode TUI
+# Interface interactive (recommandé)
 codex -m deepseek-v4-flash-free -c model_provider=opencode
+
+codex -m qwen/qwen3.5-397b-a17b -c model_provider=nvidia
+
+# En one-shot (pour scripts / automation)
+codex exec -m deepseek-v4-flash-free -c model_provider=opencode "ta question"
 ```
 
-> ⚠️ **Important** : utilisez `-c model_provider=<nom>` (singulier), PAS `model_providers.override`.
+> ⚠️ **Important** : utilisez `-c model_provider=<nom>` (singulier), PAS `model_providers.override`. Sans `-c model_provider=...`, Codex utilisera son provider par défaut (ChatGPT).
 
 ## 🔧 Configuration
 
